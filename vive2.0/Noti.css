@@ -1,0 +1,490 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+html {
+  background: mediumseagreen;
+  font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  color: #666;
+  font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+div, h2, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  color: white;
+  padding: 40px 0 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header h2 a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.header h2 a:hover {
+  border-bottom-color: white;
+  opacity: 1;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 10px;
+}
+
+.column {
+  flex: 1;
+  flex-direction: column;
+}
+
+.article {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: #666;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-basis: auto;
+  margin: 10px;
+}
+
+.article:hover,
+.article:focus {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: #444;
+}
+
+.article-image {
+  background: #eee;
+  display: block;
+  padding-top: 75%;
+  position: relative;
+  width: 100%;
+}
+
+.article-image img {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.article-image.is-3by2 {
+  padding-top: 66.6666%;
+}
+
+.article-image.is-16by9 {
+  padding-top: 56.25%;
+}
+
+.article-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.article-title {
+  color: #333;
+  flex-shrink: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.article-content {
+  flex: 1;
+  margin-top: 5px;
+}
+
+.article-info {
+  display: flex;
+  font-size: 0.85em;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .columns,
+  .column {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .first-article {
+    flex-direction: row;
+  }
+
+  .first-article .article-body {
+    flex: 1;
+  }
+
+  .first-article .article-image {
+    height: 300px;
+    order: 2;
+    padding-top: 0;
+    width: 400px;
+  }
+
+  .main-column {
+    flex: 3;
+  }
+
+  .nested-column {
+    flex: 2;
+  }
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+:root{
+    --gris: #e9bf02;
+    --azul: #a819a8;
+    --degradado:linear-gradient(90deg, var(--azul), var(--gris));
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+*::selection{
+    background: var(--azul);
+    color: rgb(255, 255, 255);
+}
+
+html{
+    font-size: 62.4%;
+    overflow: scroll;
+}
+
+body{
+    background: #ffffff
+}
+
+
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    background: var(--degradado);
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 .5rem 1rem rgba(161, 29, 29, 0.1);
+    transition: all .3s linear;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.heading{
+    text-align: center;
+    background: var(--gris);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(156, 59, 212);
+    box-shadow: 0 .5rem 1rem rgba(235, 94, 12, 0.1);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2rem;
+    color: var(--gris);
+}
+
+header .logo span{
+    color: var(--azul);
+}
+
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--gris);
+}
+
+header .navbar a:hover{
+    color: var(--azul);
+}
+
+header input{
+    display: none;
+}
+
+header label{
+    font-size: 3rem;
+    color: var(--gris);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/inicio_fondo2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.inicio .image img{
+    width: 15w;
+    animation: float 3s linear infinite;
+}
+
+.inicio .content h3{
+    font-size: 5.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.inicio .content h3 span{
+    color: var(--azul);
+    text-transform: uppercase;
+}
+
+.inicio .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.inicio2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/inicio_fondo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.inicio2 .image img{
+    width: 40vw;
+    animation: float 3s linear infinite;
+}
+
+.inicio2 .content h3{
+    font-size: 5.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.inicio2 .content h3 span{
+    color: var(--azul);
+    text-transform: uppercase;
+}
+
+.inicio2 .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.inicio3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/inicio_fondo2.jg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.inicio3 .image img{
+    width: 30vw;
+    animation: float 3s linear infinite;
+}
+
+.inicio3 .content h3{
+    font-size: 5.5rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.inicio3 .content h3 span{
+    color: var(--azul);
+    text-transform: uppercase;
+}
+
+.inicio3 .content p{
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.servicio .caja-contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.servicio .caja-contenedor .caja{
+    flex: 1 1 30rem;
+    background: rgb(255, 255, 255);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin: 1.5rem;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    transition: .2s linear;
+}
+
+.servicio .caja-contenedor .caja h3{
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.servicio .caja-contenedor .caja p{
+    font-size: 1.3rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(2.5rem);
+    }
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+
+    @media(max-width:450px){
+
+    }
+
+    .inicio{
+        flex-flow: column-reverse;
+    }
+
+    .inicio .image img{
+        width: 100%;
+    }
+
+    .inicio .content h3{
+        font-size: 3.6rem;
+    }
+
+    .inicio .content p{
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+
+
+
+
+}
